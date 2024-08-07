@@ -5,8 +5,8 @@ import Profile from './profile';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>izigo</Text>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-3xl">izigo</Text>
       <StatusBar style="auto" />
       <Link href="/profile" style={{ color: 'blue' }}>Go to Profileee</Link>
     </View>
