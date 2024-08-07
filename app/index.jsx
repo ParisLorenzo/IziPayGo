@@ -6,7 +6,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <SafeAreaView className="bg-primary h-full" > 
+    <SafeAreaView className="bg-primary h-full" >
+      <ScrollView contentContainerStyle={{height: '100%'}}>
+        <view className=''>
+          
+        </view>
+        </ScrollView> 
     </SafeAreaView>
   );
 }
