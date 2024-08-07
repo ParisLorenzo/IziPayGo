@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "IziGo",
+    "scheme": "IziGo",
     "slug": "IziGo",
     "version": "1.0.0",
     "orientation": "portrait",
