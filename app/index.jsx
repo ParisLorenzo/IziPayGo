@@ -1,12 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import Profile from './profile';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import AppNavigator from './AppNavigator';
 import Step from './step';
-
-
 
 //Importar imagenes 
 import { images } from "../constants";
@@ -63,6 +60,8 @@ const styles = StyleSheet.create({
 });
 
 export default function App() {
+  const router = useRouter();
+
   return (
     <SafeAreaView className="bg-primary">
       <Header />
@@ -99,7 +98,7 @@ export default function App() {
         <TouchableOpacity style={styles.button}>
         <CustomButton
             title="Escanear QR de la tienda"
-            handlePress={() => router.push("/scanTienda")}
+            handlePress={() => router.push("/catalog")}
             //containerStyles="w-full mt-7"
           />
         </TouchableOpacity>
