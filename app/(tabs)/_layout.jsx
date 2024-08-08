@@ -44,6 +44,38 @@ const TabsLayout = () => {
             )
           }}
         />
+        <Tabs.Screen 
+          name="scan"
+          options={{
+            title: "Escanear",
+            headerShown: false,
+            tabBarIcon: ({color, focused}) =>
+            ( 
+              <TabsIcon
+                icon={icons.home}
+                color={color}
+                name="Escanear"
+                focused={focused}
+              />
+            )
+          }}
+        />
+        <Tabs.Screen 
+          name="cart"
+          options={{
+            title: "Carrito",
+            headerShown: false,
+            tabBarIcon: ({color, focused}) =>
+            ( 
+              <TabsIcon
+                icon={icons.home}
+                color={color}
+                name="Carrito"
+                focused={focused}
+              />
+            )
+          }}
+        />
       </Tabs>
     </>
   )
