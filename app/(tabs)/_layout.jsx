@@ -13,7 +13,10 @@ const TabsIcon = ({icon, color, name, focused}) => {
         tintColor={color}
         className="w-6 h-6"
       />
-      <Text className={`$(focused ? 'font-psemibold' : 'font-regular)`}>
+      <Text 
+        className={`$(focused ? 'font-psemibold' : 'font-regular) text-xs`}
+        style={{color: color}}
+      >
         {name}
       </Text>
     </View>
@@ -25,7 +28,15 @@ const TabsLayout = () => {
     <>
       <Tabs
         screenOptions={{
-          tabBarShowLabel: false
+          tabBarShowLabel: false,
+          tabBarActiveTintColor: '#2AD2C9',
+          tabBarInactiveTintColor: '#929FAD',
+          tabBarStyle:{
+            backgroundColor: '#ffff',
+            borderTopWidth: 0,
+            height: 90,
+            paddingTop: 10
+          }
         }}
       >
         <Tabs.Screen 
@@ -36,7 +47,7 @@ const TabsLayout = () => {
             tabBarIcon: ({color, focused}) =>
             ( 
               <TabsIcon
-                icon={icons.home}
+                icon={icons.category}
                 color={color}
                 name="Catálogo"
                 focused={focused}
@@ -68,7 +79,7 @@ const TabsLayout = () => {
             tabBarIcon: ({color, focused}) =>
             ( 
               <TabsIcon
-                icon={icons.home}
+                icon={icons.cart}
                 color={color}
                 name="Carrito"
                 focused={focused}
