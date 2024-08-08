@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
-import { Slot, Stack } from 'expo-router'
+import { Redirect, Stack } from 'expo-router'
+import { StatusBar } from "expo-status-bar";
 import React from 'react'
+
 
 const RootLayout = () => { 
     return (
