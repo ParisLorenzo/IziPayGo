@@ -74,12 +74,12 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   button: {
-    
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 25,
     marginTop: 20,
     alignSelf: 'center', // Centrar el botón horizontalmente
+    width: "100%"
   },
 });
 
@@ -87,15 +87,49 @@ export default function App() {
   const router = useRouter();
   return (
     <SafeAreaView className="bg-primary h-full">
-      <Header />
-
-      <TouchableOpacity style={styles.button}>
+      <Header/>
+      <View
+          className="w-full flex h-full px-4"
+          style={{
+            justifyContent: 'space-around'
+          }}
+        >
+        <View 
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <View className="mx-5">
+            <Text style={styles.welcomeText}>Tienda Tambo - Larco</Text>
+            <Text style={styles.subText}>VXHC+CC9, Av. José Larco, Miraflores 15074</Text>
+          </View>
+          <View 
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+            >
+            <Image
+              source={images.tiendaportada}
+              className="w-[400px] h-[300px]"
+              resizeMode="contain"
+              />
+          </View>
+          <View className="mx-5">
+            <Text style={styles.subText}>
+            Tambo es una cadena de practi-tiendas que es parte de Lindcorp, un grupo empresarial peruano dedicado y comprometido con el desarrollo del Perú.
+            </Text>
+          </View>
+          <TouchableOpacity style={styles.button}>
         <CustomButton
-            title="Comenzar a Comprar"
+            title="Comenzar a comprar"
             handlePress={() => router.push("/catalog")}
             //containerStyles="w-full mt-7"
           />
         </TouchableOpacity>
+        </View>
+        </View>
       
     </SafeAreaView>
   );
