@@ -1,11 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react'
+import BannerHeader from '../../components/BannerHeader'
 
 const Catalog = () => {
   return (
-    <View>
-      <Text>Catalog</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <BannerHeader/>
+      {/* <Header /> */}
+      {/* <Banner /> */}
+      {/* <ProductList /> */}
+      {/* <Promotion /> */}
+    </ScrollView>
   )
 }
 
