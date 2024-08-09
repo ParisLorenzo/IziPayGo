@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     paddingBottom: 70, // Añadir relleno para el final de la vista de desplazamiento
     alignContent: "center",
     justifyContent:"center",
-    marginTop: 30
+    marginTop: 50
   },
 
   header: {
