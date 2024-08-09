@@ -1,12 +1,11 @@
 import React from 'react'
-import { StatusBar } from 'expo-status-bar';
-import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
+import { View, Text, ScrollView, Dimensions, Image } from "react-native";
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 //Importar imagenes 
 import { images } from "../constants";
-import { CustomButton, FormField } from "../components";
+import { CustomButton } from "../components";
 
 export default function App() {
 

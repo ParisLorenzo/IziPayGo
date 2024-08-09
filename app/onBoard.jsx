@@ -2,14 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import { Link, useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Step from './step';
-
 //Importar imagenes 
 import { images } from "../constants";
 import { icons } from "../constants";
 
 //boton
-import { CustomButton, Loader } from "../components";
+import { CustomButton, Step } from "../components";
 
 const Header = () => {
   const router = useRouter();
