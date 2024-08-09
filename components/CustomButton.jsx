@@ -6,6 +6,7 @@ const CustomButton = ({
   containerStyles,
   textStyles,
   isLoading,
+  size
 }) => {
   return (
     <TouchableOpacity
@@ -16,9 +17,16 @@ const CustomButton = ({
       }`}
       disabled={isLoading}
     >
-      <Text className={`text-primary font-psemibold text-lg ${textStyles}`}>
+      {
+        size ? 
+        <Text className={`text-primary font-psemibold text-xs ${textStyles}`}>
         {title}
       </Text>
+        :
+        <Text className={`text-primary font-psemibold text-lg ${textStyles}`}>
+        {title}
+        </Text>
+      }
 
       {isLoading && (
         <ActivityIndicator
