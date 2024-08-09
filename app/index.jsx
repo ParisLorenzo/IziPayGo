@@ -25,8 +25,11 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   scrollContainer: {
-    padding: 7,
+    marginHorizontal: 20,
     paddingBottom: 70, // Añadir relleno para el final de la vista de desplazamiento
+    alignContent: "center",
+    justifyContent:"center",
+    marginTop: 30
   },
 
   header: {
@@ -65,21 +68,18 @@ export default function App() {
   return (
     <SafeAreaView className="bg-primary">
       <Header />
-      <ScrollView  contentContainerStyle={styles.scrollContainer}>
-        <View className="flex-1 justify-center items-center px-4">
+      <ScrollView      
+      contentContainerStyle={styles.scrollContainer} >
             <Text style={styles.welcomeText}>Bienvenido al futuro de las compras</Text>
             <Text style={styles.subText}>Nos alegramos mucho de que estés aquí!</Text>
          {
             <Image
               source={images.portada}
-              style={styles.portada}
               className="max-w-[380px] w-[400px] h-[200px]"
               resizeMode="contain"
               />
          }
-        </View>
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Text style={styles.headerText}>Como utilizar la aplicación:</Text>
+        <Text style={styles.subText}>Como utilizar la aplicación:</Text>
         <Step
           stepNumber={1}
           title="Escanee el código de la tienda."
@@ -102,7 +102,6 @@ export default function App() {
             //containerStyles="w-full mt-7"
           />
         </TouchableOpacity>
-      </ScrollView>
       </ScrollView>
     </SafeAreaView>
   );
