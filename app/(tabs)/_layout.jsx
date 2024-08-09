@@ -1,17 +1,17 @@
-import { StyleSheet, Text, View , Image} from 'react-native'
-import React from 'react'
-import {Tabs, Redirect} from 'expo-router'
+import React from 'react';
+import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
+import { Tabs, useRouter } from 'expo-router';
 import { icons } from "../../constants";
+import CameraButton from '../../components/CameraButton';
 
-
-const TabsIcon = ({icon, color, name, focused}) => {
+const TabsIcon = ({ icon, color, name, focused }) => {
   return (
-    <View className="items-center justify-center gap-2">
+    <View style={{ alignItems: 'center', justifyContent: 'center' }}>
       <Image
-        resizeMode="contain"
         source={icon}
+        resizeMode="contain"
         tintColor={color}
-        className="w-6 h-6"
+        className="w-6 h-6 mb-2"
       />
       <Text 
         className={`$(focused ? 'font-psemibold' : 'font-regular) text-xs`}
@@ -21,9 +21,11 @@ const TabsIcon = ({icon, color, name, focused}) => {
       </Text>
     </View>
   );
-}
+};
 
 const TabsLayout = () => {
+  const router = useRouter();
+
   return (
     <>
       <Tabs
@@ -44,15 +46,13 @@ const TabsLayout = () => {
           options={{
             title: "Catálogo",
             headerShown: false,
-            tabBarIcon: ({color, focused}) =>
-            ( 
+            tabBarIcon: ({ color, focused }) =>
               <TabsIcon
                 icon={icons.category}
                 color={color}
-                name="Catálogo"
+                name={"Catálogo"}
                 focused={focused}
-              />
-            )
+              />,
           }}
         />
         <Tabs.Screen 
@@ -60,15 +60,11 @@ const TabsLayout = () => {
           options={{
             title: "Escanear",
             headerShown: false,
-            tabBarIcon: ({color, focused}) =>
-            ( 
-              <TabsIcon
-                icon={icons.home}
-                color={color}
-                name="Escanear"
-                focused={focused}
-              />
-            )
+            tabBarButton: (props) => (
+                 <CameraButton
+                  onPress={() => router.push("/scan")}
+                 />
+            ),
           }}
         />
         <Tabs.Screen 
@@ -76,22 +72,18 @@ const TabsLayout = () => {
           options={{
             title: "Carrito",
             headerShown: false,
-            tabBarIcon: ({color, focused}) =>
-            ( 
+            tabBarIcon: ({ color, focused }) =>
               <TabsIcon
                 icon={icons.cart}
                 color={color}
-                name="Carrito"
+                name={"Carrito"}
                 focused={focused}
-              />
-            )
+              />,
           }}
         />
       </Tabs>
     </>
-  )
+  );
 }
 
-export default TabsLayout
-
-const styles = StyleSheet.create({})
+export default TabsLayout;

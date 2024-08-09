@@ -98,7 +98,7 @@ export default function App() {
         <TouchableOpacity style={styles.button}>
         <CustomButton
             title="Escanear QR de la tienda"
-            handlePress={() => router.push("/scanTienda")}
+            handlePress={() => router.push("/catalog")}
             //containerStyles="w-full mt-7"
           />
         </TouchableOpacity>

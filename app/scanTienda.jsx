@@ -76,7 +76,6 @@ export default function App() {
 
       <TouchableOpacity style={styles.button}>
         <CameraButton
-
             handlePress={() => router.push("/(tabs)/catalog")}
             //containerStyles="w-full mt-7"
           />
