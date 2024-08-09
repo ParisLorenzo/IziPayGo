@@ -74,12 +74,13 @@ export default function App() {
     <SafeAreaView className="bg-primary">
       <Header />
 
-      <View style={styles.button}>
-        <CameraButton
-            onPress={() => router.push("/tienda")}
+      <TouchableOpacity style={styles.button}>
+        <CustomButton
+            title="Comenzar a Comprar"
+            handlePress={() => router.push("/catalog")}
             //containerStyles="w-full mt-7"
           />
-        </View>
+        </TouchableOpacity>
       
     </SafeAreaView>
   );

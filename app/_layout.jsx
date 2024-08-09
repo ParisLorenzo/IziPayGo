@@ -12,6 +12,21 @@ const RootLayout = () => {
             options={{headerShown:
             false}} 
         />
+        <Stack.Screen 
+            name="onBoard"
+            options={{headerShown:
+            false}} 
+        />
+        <Stack.Screen 
+            name="scanTienda"
+            options={{headerShown:
+            false}} 
+        />
+        <Stack.Screen 
+            name="tienda"
+            options={{headerShown:
+            false}} 
+        />
         </Stack>
     ); 
 } 
