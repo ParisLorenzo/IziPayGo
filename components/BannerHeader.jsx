@@ -10,7 +10,7 @@ export default function BannerHeader() {
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search"
+          placeholder="Buscar producto"
         />
       </View>
     </View>

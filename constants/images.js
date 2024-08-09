@@ -5,4 +5,5 @@ import check from "../assets/check.png"
 import qr from '../assets/qr.png';
 import tiendaportada from '../assets/tiendaportada.jpg';
 import tambo from '../assets/tambo.png';
-export default { logo, logo2, portada, check, qr, tiendaportada, tambo};
+import banner from '../assets/banner.png';
+export default { logo, logo2, portada, check, qr, tiendaportada, tambo, banner};
