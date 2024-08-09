@@ -6,13 +6,24 @@ import Step from './step';
 
 //Importar imagenes 
 import { images } from "../constants";
+import { icons } from "../constants";
 
 //boton
 import { CustomButton, Loader } from "../components";
 
 const Header = () => {
+  const router = useRouter();
+
   return (
     <View style={styles.header}>
+      <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <Image
+          tintColor="white"
+          source={icons.back}
+          resizeMode="contain"
+          className="w-6 h-6 mb-2"
+        />
+      </TouchableOpacity>
       <Image
         source={images.logo2}
         style={styles.logo}
@@ -29,6 +40,10 @@ const styles = StyleSheet.create({
     alignContent: "center",
     justifyContent:"center",
     marginTop: 50
+  },
+  backButton: {
+    marginTop: 10,
+    marginRight: 10,
   },
 
   header: {

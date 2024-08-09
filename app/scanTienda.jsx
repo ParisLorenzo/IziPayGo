@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
 export default function App() {
   const router = useRouter();
   return (
-    <SafeAreaView className="bg-primary">
+    <SafeAreaView className="bg-primary h-full">
       <Header />
 
       <View style={styles.button}>
