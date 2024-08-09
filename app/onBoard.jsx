@@ -87,13 +87,11 @@ const onBoard = () => {
       contentContainerStyle={styles.scrollContainer} >
             <Text style={styles.welcomeText}>Bienvenido al futuro de las compras</Text>
             <Text style={styles.subText}>Nos alegramos mucho de que estés aquí!</Text>
-         {
             <Image
               source={images.portada}
               className="max-w-[380px] w-[400px] h-[200px]"
               resizeMode="contain"
               />
-         }
         <Text style={styles.subText}>Como utilizar la aplicación:</Text>
         <Step
           stepNumber={1}

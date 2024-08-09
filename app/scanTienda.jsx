@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { Link, useRouter } from 'expo-router';
 import Profile from '.';
 import {Tabs, Redirect} from 'expo-router'
@@ -58,14 +58,14 @@ const styles = StyleSheet.create({
     height: 40,
   },
   welcomeText: {
-    fontSize: 19.2,
+    fontSize: 21,
     textAlign: 'center',
     marginVertical: 5,
     color: '#000', 
     fontWeight: 'bold',
   },
   subText: {
-    fontSize: 14,
+    fontSize: 16,
     textAlign: 'center',
     color: '#000', 
   },
@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   button: {
-    
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 25,
@@ -89,12 +88,35 @@ export default function App() {
   return (
     <SafeAreaView className="bg-primary h-full">
       <Header />
+        <View
+          className="w-full flex h-full px-4"
+          style={{
+            justifyContent: 'space-around'
+          }}
+        >
+          <View className="mx-5">
+            <Text style={styles.welcomeText}>Escanea el código de la tienda</Text>
+            <Text style={styles.subText}>Estás a punto de experimentar la primera aplicación de compras sin colas del mundo. Sin colas, sin esperas y sin pasar por caja.</Text>
+          </View>
+          <View 
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
 
-      <View style={styles.button}>
-        <CameraButton
-            onPress={() => router.push("/tienda")}
-            //containerStyles="w-full mt-7"
-          />
+            >
+            <Image
+              source={images.qr}
+              className="w-[300px] h-[300px]"
+              resizeMode="contain"
+              />
+            </View>
+
+            <View style={styles.button}>
+            <CameraButton
+                onPress={() => router.push("/tienda")}
+              />
+            </View>
         </View>
       
     </SafeAreaView>
