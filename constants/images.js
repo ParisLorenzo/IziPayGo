@@ -6,4 +6,5 @@ import qr from '../assets/qr.png';
 import tiendaportada from '../assets/tiendaportada.jpg';
 import tambo from '../assets/tambo.png';
 import banner from '../assets/banner.png';
-export default { logo, logo2, portada, check, qr, tiendaportada, tambo, banner};
+import product from '../assets/product.png';
+export default { logo, logo2, portada, check, qr, tiendaportada, tambo, banner, product};
