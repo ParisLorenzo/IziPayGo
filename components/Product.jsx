@@ -2,8 +2,12 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { images } from "../constants";
 import CustomButton from './CustomButton';
+import { Link, useRouter } from 'expo-router';
+
 
 export default function Product({ image, name, price, oldPrice }) {
+  const router = useRouter();
+
   return (
     <View style={styles.productContainer}>
       <Image source={images.product} style={styles.productImage} />
@@ -14,7 +18,7 @@ export default function Product({ image, name, price, oldPrice }) {
       <CustomButton 
             title="Ver producto"
             containerStyles="min-h-[30px]"
-            handlePress={() => router.push("/scanTienda")}
+            handlePress={() => router.push("/productoSelect")}
             size="true"
             //containerStyles="w-full mt-7"
         />  
