@@ -89,6 +89,14 @@ const TabsLayout = () => {
             tabBarVisible: false, // Opcional: puedes usar esta línea si el tab aún se muestra.
           }}
         />
+        <Tabs.Screen 
+          name="boleta"
+          options={{
+            headerShown: false,
+            tabBarButton: () => null, // Esto ocultará el tab en la barra de navegación inferior
+            tabBarVisible: false, // Opcional: puedes usar esta línea si el tab aún se muestra.
+          }}
+        />
       </Tabs>
     </>
   );

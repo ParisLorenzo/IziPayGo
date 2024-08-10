@@ -2,9 +2,9 @@ import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';  // Importa el ícono
 
-export default function AddToCartButton() {
+export default function AddToCartButton({press}) {
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={press}>
       <View style={styles.buttonContent}>
         <Icon name="cart-outline" size={24} color="#fff" style={styles.icon} />
         <Text style={styles.buttonText}>Agregar al carrito</Text>

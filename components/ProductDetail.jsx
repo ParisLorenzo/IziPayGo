@@ -3,8 +3,11 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import QuantitySelector from './QuantitySelector';
 import AddToCartButton from './AddtoCartButton';
 import { images } from "../constants";
+import { Link, useRouter } from 'expo-router';
 
 export default function ProductDetail() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       <Text style={styles.productTitle}>Inka Chips Jalapeño 135gr</Text>
@@ -14,7 +17,7 @@ export default function ProductDetail() {
       />
       <Text style={styles.productPrice}>s/. 8.00</Text>
       <QuantitySelector />
-      <AddToCartButton />
+      <AddToCartButton press={() => router.push("/cart")} />
     </View>
   );
 }
