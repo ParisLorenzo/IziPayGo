@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     paddingBottom: 70, // Añadir relleno para el final de la vista de desplazamiento
     alignContent: "center",
     justifyContent:"center",
-    marginTop: 50
+    marginTop: 10
   },
   backButton: {
     marginTop: 10,
@@ -81,7 +81,7 @@ const onBoard = () => {
   return (
     <SafeAreaView className="bg-primary">
       <Header />
-      <ScrollView      
+      <ScrollView  
       contentContainerStyle={styles.scrollContainer} >
             <Text style={styles.welcomeText}>Bienvenido al futuro de las compras</Text>
             <Text style={styles.subText}>Nos alegramos mucho de que estés aquí!</Text>

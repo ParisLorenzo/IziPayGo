@@ -88,7 +88,8 @@ export default function App() {
   return (
     <SafeAreaView className="bg-primary h-full">
       <Header/>
-      <View
+       <ScrollView className="mt-20">
+       <View
           className="w-full flex h-full px-4"
           style={{
             justifyContent: 'space-around'
@@ -129,7 +130,10 @@ export default function App() {
           />
         </TouchableOpacity>
         </View>
-        </View>
+      </View>
+       </ScrollView>
+
+
       
     </SafeAreaView>
   );
