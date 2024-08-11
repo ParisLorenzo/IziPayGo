@@ -6,6 +6,7 @@ import ProductList from '../../components/ProductList'
 
 const Catalog = () => {
   return (
+    
     <ScrollView  className="bg-primary" style={styles.container}>
       <BannerHeader/>
       <Banner/>
