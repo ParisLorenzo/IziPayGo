@@ -96,7 +96,7 @@ const Scan = () => {
   if (!permission.granted) {
     return (
       <View style={styles.container}>
-        <Text style={styles.message}>We need your permission to show the camera</Text>
+        <Text style={styles.message}>Necesitamos permisos para usar la cámara</Text>
         <Button onPress={requestPermission} title="Grant permission" />
       </View>
     );
