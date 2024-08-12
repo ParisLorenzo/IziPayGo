@@ -32,6 +32,11 @@ const RootLayout = () => {
             options={{headerShown:
             false}} 
         />
+                        <Stack.Screen 
+            name="(tienda)"
+            options={{headerShown:
+            false}} 
+        />
         </Stack>
     ); 
 } 

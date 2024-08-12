@@ -46,8 +46,8 @@ export default function App() {
           />
 
           <CustomButton
-            title="Ingresar con cuenta"
-            handlePress={() => router.push("/onBoard")}
+            title="Ingresar como tienda"
+            handlePress={() => router.push("/homeAdmin")}
             containerStyles="mt-7"
             isLoading={false}
           />

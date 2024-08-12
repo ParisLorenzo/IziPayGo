@@ -39,27 +39,27 @@ const TabsLayout = () => {
             backgroundColor: '#ffff',
             borderTopWidth: 0,
             height: 70,
-            paddingTop: 30
+            paddingTop: 20
           },
           header: () => <Header />, // Agrega el Header aquí
         }}
       >
         <Tabs.Screen 
-          name="catalog"
+          name="homeAdmin"
           options={{
-            title: "Catálogo",
+            title: "Panel",
             headerShown: true, // Asegúrate de que el header esté visible
             tabBarIcon: ({ color, focused }) =>
               <TabsIcon
-                icon={icons.category}
+                icon={icons.home}
                 color={color}
-                name={"Catálogo"}
+                name={"Panel"}
                 focused={focused}
               />,
           }}
         />
         <Tabs.Screen 
-          name="scan"
+          name="scanAdmin"
           options={{
             title: "Escanear",
             headerShown: true,
@@ -71,35 +71,20 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen 
-          name="cart"
+          name="ajustes"
           options={{
-            title: "Carrito",
+            title: "Ajustes",
             headerShown: true,
             tabBarIcon: ({ color, focused }) =>
               <TabsIcon
-                icon={icons.cart}
+                icon={icons.setting}
                 color={color}
-                name={"Carrito"}
+                name={"Ajustes"}
                 focused={focused}
               />,
           }}
         />
-        <Tabs.Screen 
-          name="productoSelect"
-          options={{
-            headerShown: true,
-            tabBarButton: () => null, // Esto ocultará el tab en la barra de navegación inferior
-            tabBarVisible: false, // Opcional: puedes usar esta línea si el tab aún se muestra.
-          }}
-        />
-        <Tabs.Screen 
-          name="boleta"
-          options={{
-            headerShown: true,
-            tabBarButton: () => null, // Esto ocultará el tab en la barra de navegación inferior
-            tabBarVisible: false, // Opcional: puedes usar esta línea si el tab aún se muestra.
-          }}
-        />
+
       </Tabs>
     </SafeAreaView>
   );
