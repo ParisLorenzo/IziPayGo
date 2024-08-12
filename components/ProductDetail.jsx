@@ -17,7 +17,7 @@ export default function ProductDetail({ details }) {
       <Text style={styles.productPrice}>s/. {parseFloat(details.precio).toFixed(2)}</Text>
       <Text style={styles.productDescription}>{details.descripcion}</Text>
       <QuantitySelector />
-      <AddToCartButton press={() => router.push("/cart")} />
+      <AddToCartButton text="Añadir al carrito" icon="cart-outline" press={() => router.push("/cart")} />
     </View>
   );
 }

@@ -19,7 +19,7 @@ export default function OrderSummary() {
         <Text style={styles.totalText}>Total</Text>
         <Text style={styles.totalPrice}>s/. 8.00</Text>
       </View>
-      <AddToCartButton press={() => router.push("/boleta")} />
+      <AddToCartButton icon={"card"} text="Proceder al pago" press={() => router.push("/boleta")} />
     </View>
   );
 }
