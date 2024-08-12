@@ -2,20 +2,20 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import QuantitySelector from './QuantitySelector';
 import AddToCartButton from './AddtoCartButton';
-import { images } from "../constants";
 import { Link, useRouter } from 'expo-router';
 
-export default function ProductDetail() {
+export default function ProductDetail({ details }) {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.productTitle}>Inka Chips Jalapeño 135gr</Text>
+      <Text style={styles.productTitle}>{details.nombre}</Text>
       <Image 
-        source={images.product}
+        source={{ uri: details.foto }}
         style={styles.productImage} 
       />
-      <Text style={styles.productPrice}>s/. 8.00</Text>
+      <Text style={styles.productPrice}>s/. {parseFloat(details.precio).toFixed(2)}</Text>
+      <Text style={styles.productDescription}>{details.descripcion}</Text>
       <QuantitySelector />
       <AddToCartButton press={() => router.push("/cart")} />
     </View>
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginVertical: 20,
+    textAlign: 'center',
   },
   productImage: {
     width: 200,
@@ -43,6 +44,11 @@ const styles = StyleSheet.create({
   productPrice: {
     fontSize: 22,
     fontWeight: 'bold',
+    marginVertical: 20,
+  },
+  productDescription: {
+    fontSize: 16,
+    textAlign: 'center',
     marginVertical: 20,
   },
 });

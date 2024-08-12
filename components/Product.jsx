@@ -5,7 +5,7 @@ import CustomButton from './CustomButton';
 import { Link, useRouter } from 'expo-router';
 
 
-export default function Product({ image, name, price, oldPrice }) {
+export default function Product({ id, image, name, price, oldPrice }) {
   const router = useRouter();
   const formattedPrice = parseFloat(price).toFixed(2);
 
@@ -19,7 +19,12 @@ export default function Product({ image, name, price, oldPrice }) {
       <CustomButton 
             title="Ver producto"
             containerStyles="min-h-[30px]"
-            handlePress={() => router.push("/productoSelect")}
+            handlePress={() => router.push({
+              pathname: 'productoSelect/[id]',
+              params:{
+                id: id
+              }
+            })}
             size="true"
             //containerStyles="w-full mt-7"
         />  

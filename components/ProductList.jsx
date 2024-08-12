@@ -10,6 +10,7 @@ export default function ProductList({ title, products }) {
         {products.map(product => (
           <Product 
             key={product.id} 
+            id={product.id}
             image={product.foto}  // Cambiar `image` por `foto`
             name={product.nombre} // Cambiar `name` por `nombre`
             price={product.precio} // Cambiar `price` por `precio`

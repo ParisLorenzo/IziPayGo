@@ -85,7 +85,7 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen 
-          name="productoSelect"
+          name="productoSelect/[id]"
           options={{
             headerShown: true,
             tabBarButton: () => null, // Esto ocultará el tab en la barra de navegación inferior
