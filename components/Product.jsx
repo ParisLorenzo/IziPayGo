@@ -7,12 +7,13 @@ import { Link, useRouter } from 'expo-router';
 
 export default function Product({ image, name, price, oldPrice }) {
   const router = useRouter();
+  const formattedPrice = parseFloat(price).toFixed(2);
 
   return (
     <View style={styles.productContainer}>
-      <Image source={images.product} style={styles.productImage} />
+      <Image source={{ uri: image }}style={styles.productImage} />
       <Text style={styles.productName}>{name}</Text>
-      <Text style={styles.productPrice}>S/ {price}</Text>
+      <Text style={styles.productPrice}>S/ {formattedPrice}</Text>
       {oldPrice && <Text style={styles.productOldPrice}>S/ {oldPrice}</Text>}
       <TouchableOpacity style={styles.button}>
       <CustomButton 

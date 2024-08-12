@@ -2,28 +2,17 @@ import React from 'react';
 import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import Product from './Product';
 
-export default function ProductList() {
-  const products = [
-    // Ejemplo de productos
-    { id: 1, image: 'link-a-la-imagen', name: 'Producto 1', price: '92.90', oldPrice: '99.80' },
-    { id: 2, image: 'link-a-la-imagen', name: 'Producto 2', price: '13.90', oldPrice: '17.80' },
-    { id: 3, image: 'link-a-la-imagen', name: 'Producto 2', price: '13.90', oldPrice: '17.80' },
-    { id: 4, image: 'link-a-la-imagen', name: 'Producto 2', price: '13.90', oldPrice: '17.80' },
-
-    // Agrega más productos aquí
-  ];
-
+export default function ProductList({ title, products }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.sectionTitle}>Productos Destacados</Text>
+      <Text style={styles.sectionTitle}>{title}</Text>
       <ScrollView horizontal style={styles.productList}>
         {products.map(product => (
           <Product 
             key={product.id} 
-            image={product.image}
-            name={product.name}
-            price={product.price}
-            oldPrice={product.oldPrice}
+            image={product.foto}  // Cambiar `image` por `foto`
+            name={product.nombre} // Cambiar `name` por `nombre`
+            price={product.precio} // Cambiar `price` por `precio`
           />
         ))}
       </ScrollView>
