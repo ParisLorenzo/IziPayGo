@@ -23,7 +23,7 @@ const RootLayout = () => {
             false}} 
         />
         <Stack.Screen 
-            name="tienda"
+            name="tienda/[item]"
             options={{headerShown:
             false}} 
         />
