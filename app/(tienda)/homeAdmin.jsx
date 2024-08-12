@@ -2,14 +2,17 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'; // Importa los íconos
 import { images } from "../../constants";
+import { Link, useRouter } from 'expo-router';
 
 export default function HomeAdmin() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       {/* Header con logo y botón QR */}
       <View style={styles.header}>
         <Image source={images.tambo} style={styles.logo} />
-        <TouchableOpacity style={styles.qrButton}>
+        <TouchableOpacity style={styles.qrButton} onPress={() => router.push("/qrScreen")}>
           <FontAwesome name="qrcode" size={20} color="#fff" style={styles.qrIcon} />
           <Text style={styles.qrText}>IzipayGo QR</Text>
         </TouchableOpacity>

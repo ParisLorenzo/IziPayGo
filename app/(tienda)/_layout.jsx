@@ -84,6 +84,14 @@ const TabsLayout = () => {
               />,
           }}
         />
+                <Tabs.Screen 
+          name="qrScreen"
+          options={{
+            headerShown: true,
+            tabBarButton: () => null, // Esto ocultará el tab en la barra de navegación inferior
+            tabBarVisible: false, // Opcional: puedes usar esta línea si el tab aún se muestra.
+          }}
+        />
 
       </Tabs>
     </SafeAreaView>
