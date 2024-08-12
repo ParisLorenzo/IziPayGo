@@ -65,7 +65,7 @@ const TabsLayout = () => {
             headerShown: true,
             tabBarButton: (props) => (
                  <CameraButton
-                  onPress={() => router.push("/scan")}
+                  onPress={() => router.push("/scanAdmin")}
                  />
             ),
           }}
