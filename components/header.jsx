@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   backButton: {
-    marginTop: 10,
+    marginTop: 0,
     marginRight: 10,
   },
   icon: {
